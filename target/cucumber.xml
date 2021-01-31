@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="2.287">
+    <testcase classname="Deserialize swagger pet" name="get pet" time="1.677">
+        <failure message="expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given accept header is set to "ContentType.JSON"............................passed
+When the user execute "GET" request.........................................passed
+Then the status code is 200.................................................failed
+And contentType header is "application/json"................................skipped
+And user verified 5 "doggie" 1 size.........................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at StepDefinitions.api.SwaggerDeserialize.the_status_code_is_OK(SwaggerDeserialize.java:35)
+	at ✽.the status code is 200(file:///Users/volodymyrbendiukevych/IdeaProjects/CucumberBatch4/src/test/resources/API/DeserializationSwagger.feature:6)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Practice API" name="test1" time="0.542">
+        <system-out>
+            <![CDATA[When user creates a pet with id, name, status...............................passed
+Then the status code is OK..................................................passed
+And pet with id, name, status is created....................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

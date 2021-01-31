@@ -1,0 +1,181 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-22T03:44:47.327Z",
+        "line": 11,
+        "name": "get pet",
+        "description": "",
+        "id": "deserialize-swagger-pet;get-pet;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 481461000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "accept header is set to \"ContentType.JSON\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ContentType.JSON\"",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefinitions.api.SwaggerDeserialize.acceptHeaderIsSetTo(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1150298000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user execute \"GET\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GET\"",
+                  "offset": 17
+                }
+              ],
+              "location": "StepDefinitions.api.SwaggerDeserialize.theUserExecuteGETRequest(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c500\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat StepDefinitions.api.SwaggerDeserialize.the_status_code_is_OK(SwaggerDeserialize.java:35)\n\tat ✽.the status code is 200(file:///Users/volodymyrbendiukevych/IdeaProjects/CucumberBatch4/src/test/resources/API/DeserializationSwagger.feature:6)\n",
+              "duration": 3101000,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinitions.api.SwaggerDeserialize.the_status_code_is_OK(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 620000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "contentType header is \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"application/json\"",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefinitions.api.SwaggerDeserialize.contentTypeHeaderIs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 745000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user verified 5 \"doggie\" 1 size",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 14
+                },
+                {
+                  "val": "\"doggie\"",
+                  "offset": 16
+                },
+                {
+                  "val": "1",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.api.SwaggerDeserialize.userVerifiedDoggieSize(int,java.lang.String,int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Deserialize swagger pet",
+    "description": "",
+    "id": "deserialize-swagger-pet",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/API/DeserializationSwagger.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-22T03:44:49.014Z",
+        "line": 2,
+        "name": "test1",
+        "description": "",
+        "id": "practice-api;test1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 408034000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user creates a pet with id, name, status",
+            "match": {
+              "location": "StepDefinitions.api.APIStepDefs.user_creates_a_pet_with_id_name_status()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 592000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the status code is OK",
+            "match": {
+              "location": "StepDefinitions.api.APIStepDefs.the_status_code_is_OK()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 131208000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "pet with id, name, status is created",
+            "match": {
+              "location": "StepDefinitions.api.APIStepDefs.pet_with_id_name_status_is_created()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Practice API",
+    "description": "",
+    "id": "practice-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/API/practiceAPI.feature",
+    "tags": []
+  }
+]
